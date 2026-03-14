@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+public class test {
+	public static void main(String[] args) {
+		int ts, ms, uscln;
+		Scanner banPhimCuaTui = new Scanner(System.in);
+		System.out.print("Nhập tử số (số nguyên): ");
+		ts = banPhimCuaTui.nextInt();
+		System.out.print("Nhập mẫu số (số nguyên): ");
+		do {
+			ms = banPhimCuaTui.nextInt();
+			if (ms == 0) {
+				System.out.println("Hãy nhập mẫu số khác 0!");
+				System.out.print("Nhập mẫu số: ");
+			}
+		} while(ms == 0);
+		uscln = TimUSCLN(ts, ms);
+		System.out.print("Phân số sau khi rút gọn: ");
+		XuatPhanSo(ts, ms, uscln);
+	}
+	
+	public static int TimUSCLN(int ts, int ms) {
+		ts = ts < 0 ? -ts : ts;
+		ms = ms < 0 ? -ms : ms;
+		if (ts == 0 || ms == 0) {
+			return ts + ms;
+		}
+		else {
+			while (ts != ms) {
+				if (ts > ms) {
+					ts -= ms;
+				}
+				else {
+					ms -= ts;
+				}
+			}
+		}
+		return ts;
+	}
+	
+	public static void XuatPhanSo(int ts, int ms, int uscln) {
+		ts /= uscln;
+		ms /= uscln;
+		if (ms < -1) {
+			System.out.println(-ts + "/" + -ms);
+		}
+		else if (ms == -1) {
+			System.out.println(-ts);
+		}
+		else if (ms == 0) {
+			System.out.println("Không chia cho 0");
+		}
+		else if (ms == 1) {
+			System.out.println(ts);
+		}
+		else {
+			System.out.println(ts + "/" + ms);
+		}
+	}
+}
