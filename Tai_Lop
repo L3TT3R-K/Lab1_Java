@@ -2,14 +2,16 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 
+ //1
 public class Main {
     static Scanner sc = new Scanner(System.in);
     public static void ChuVi(){
         System.out.println("Nhap ban kinh duong tron");
         double a = sc.nextDouble();
         System.out.println("Chu vi duong tron la: " + (2 * Math.PI * a));
-    } //1
+    }
 
+//2
     public static void Chia(){
         System.out.println("Nhap 2 so a, b: ");
         double a = sc.nextDouble();
@@ -19,9 +21,9 @@ public class Main {
             b = sc.nextDouble();
         }
         System.out.printf("%.3f\n", a / b);
-    } //2
+    } 
 
-
+//3
     public static int UCLN(int a, int b){
         a = Math.abs(a);
         b = Math.abs(b);
@@ -73,8 +75,9 @@ public class Main {
         }
         else
         inKetQua(a*d, b*c);
-    } //3
+    } 
 
+ //4
     public static void Chuoi(){
         sc.nextLine();
         System.out.println("Nhap hai chuoi x va y ");
@@ -107,8 +110,9 @@ public class Main {
                     pos = x.indexOf(y, pos + 1);
                 }
             }
-    } //4
+    }
 
+//5
     public static void Dien(){
         System.out.println("Nhap so dien su dung cua thang");
         double a = sc.nextDouble();
@@ -123,8 +127,9 @@ public class Main {
             TienDien = 50 * 2000 + 50 * 2500 + (a - 100) * 3500;
         }
         System.out.println("Tien dien phai tra: " + TienDien);
-    } //5
+    } 
 
+ //6
     public static void Menu(){
         int a;
         do {
@@ -162,8 +167,9 @@ public class Main {
             }
             System.out.println();
         } while(a != 6);
-    } //6
+    }
 
+//7
     public static void Prime(){
         System.out.println("Nhap so nguyen duong: ");
         int a = sc.nextInt();
@@ -183,8 +189,9 @@ public class Main {
         }
         if(ok) System.out.println(a + " la so nguyen to");
         else System.out.println(a + " khong phai la so nguyen to");
-    } //7
+    } 
 
+//8
     public static void Mang(){
         System.out.println("Nhap so phan tu cua mang: ");
         int n = sc.nextInt();
